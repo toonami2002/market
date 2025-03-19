@@ -1,0 +1,25 @@
+.review-card {
+    background-color: #f8f9fa; /* พื้นหลังสีเทาอ่อน */
+    border: 1px solid #ddd; /* กรอบสีเทา */
+    border-radius: 10px; /* มุมกรอบมน */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* เงา */
+    padding: 15px;
+}
+
+blockquote {
+    font-size: 1.2rem; /* ขนาดตัวอักษร */
+    font-style: normal; /* ปิดการใช้ italic */
+    font-family: 'Arial', sans-serif; /* ใช้ฟอนต์ที่อ่านง่าย */
+    color: #333; /* สีข้อความให้เข้มขึ้น */
+    line-height: 1.6; /* เพิ่มระยะห่างระหว่างบรรทัด */
+}
+
+blockquote footer {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+blockquote footer strong {
+    font-weight: bold;
+    color: #007bff; /* เปลี่ยนสีของชื่อผู้เขียน */
+}

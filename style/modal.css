@@ -1,0 +1,35 @@
+
+/* ตกแต่งตัว Modal */
+.modal-content {
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+}
+
+/* ตกแต่ง Header */
+.modal-header {
+    background: linear-gradient(to right, #007bff, #6610f2);
+    color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* ตกแต่งปุ่ม Close */
+.btn-close {
+    filter: invert(1);
+    opacity: 0.8;
+}
+.btn-close:hover {
+    opacity: 1;
+}
+
+/* ตกแต่งปุ่ม Submit */
+.btn-success {
+    background: linear-gradient(to right, #28a745, #218838);
+    border: none;
+    transition: 0.3s;
+}
+.btn-success:hover {
+    background: linear-gradient(to right, #218838, #28a745);
+    transform: scale(1.05);
+}

@@ -1,0 +1,39 @@
+.question-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.question-card h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.question-card p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.question-card textarea {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.no-questions {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #6c757d;
+}

@@ -1,0 +1,11 @@
+.bottom-3 {
+    bottom: 30px;
+}
+
+.end-3 {
+    right: 30px;
+}
+
+.rounded-circle {
+    border-radius: 50%;
+}

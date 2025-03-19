@@ -1,0 +1,13 @@
+body {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.container-fluid {
+    flex: 1;
+}
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}

@@ -1,0 +1,116 @@
+body {
+    background: linear-gradient(to right, #ffffff, #b3e0ff);
+    /* สีขาวมากกว่าฟ้า */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ปรับแต่ง navbar */
+.navbar {
+    width: 100%;
+    background-color: #007bff;
+    /* สีฟ้า */
+    padding: 12px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* กล่องล็อกอิน */
+.login-container {
+    width: 400px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+.login-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-container label {
+    font-weight: bold;
+    text-align: left;
+    display: block;
+}
+
+.login-container .form-control {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #007bff;
+}
+
+.login-container .btn-primary {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #007bff, #0069d9);
+    border: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.login-container .btn-primary:hover {
+    background: linear-gradient(to right, #0069d9, #007bff);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+}
+
+.login-container .alert {
+    margin-bottom: 20px;
+}
+
+/* รูปภาพข้างซ้ายและขวา */
+.city-left,
+.city-right {
+    position: absolute;
+    bottom: 0;
+    width: 350px;
+    max-width: 100%;
+    opacity: 0.9;
+}
+
+.city-left {
+    left: 0;
+}
+
+.city-right {
+    right: 0;
+}
