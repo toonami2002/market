@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 16, 2025 at 03:44 AM
+-- Generation Time: Mar 27, 2025 at 07:18 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -136,8 +136,7 @@ CREATE TABLE `questions` (
 --
 
 INSERT INTO `questions` (`id`, `user_id`, `question`, `answer`, `created_at`, `answered_at`, `status`) VALUES
-(1, 9, 'test', 'reply', '2025-03-15 19:03:51', '2025-03-15 13:22:15', 'answered'),
-(3, 11, 'test', 'test pong.', '2025-03-16 01:04:18', '2025-03-15 19:05:21', 'answered');
+(1, 9, 'test', 'reply', '2025-03-15 19:03:51', '2025-03-15 13:22:15', 'answered');
 
 -- --------------------------------------------------------
 
@@ -160,7 +159,8 @@ INSERT INTO `reviews` (`id`, `user_id`, `comment`, `created_at`) VALUES
 (1, 11, 'ระบบจองค่อยข้างห่วยเลยระบบยังไม่สมบูรณ์ซักอย่างแก้ไขหน่อยครับ', '2025-03-11 15:19:16'),
 (6, 11, 'test', '2025-03-11 15:23:08'),
 (7, 11, 'test2', '2025-03-13 12:08:59'),
-(10, 11, 'dadadadada', '2025-03-16 01:04:04');
+(10, 11, 'dadadadada', '2025-03-16 01:04:04'),
+(11, 11, 'webดีมากเลยครับ', '2025-03-27 06:10:29');
 
 -- --------------------------------------------------------
 
@@ -184,7 +184,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `phone`, `profile_pic`, `created_at`, `role`) VALUES
-(9, 'kaito', '$2y$10$.q/ekOkaRZJPoJMCuiRg8eto271nm6KkAstPU8Wei4GzT1U1xSws2', 'nook_neerada@gmail.com', '0645946274', NULL, '2025-02-18 04:37:42', 'user'),
+(9, 'kaito', '$2y$10$.q/ekOkaRZJPoJMCuiRg8eto271nm6KkAstPU8Wei4GzT1U1xSws2', 'nook_neerada@gmail.com', '0645946274', '67db2a02488ad.jpg', '2025-02-18 04:37:42', 'user'),
 (11, 'admin', '$2y$10$F.qC8Z89JIy68ilsDYnSR.d0fg.9lzgEgTKOLd04oNN4LndD6yzje', 'admin01@gmail.com', '0774546553', NULL, '2025-02-19 12:46:19', 'admin'),
 (15, 'admin1', '$2y$10$VEr.IiUARapWbFjN2HrRleGVF7Az8jlhKLbl9aPagw2NkOJB8asVm', 'koontoon.2ch@gmail.com', '0233211223', NULL, '2025-02-19 13:01:15', 'admin'),
 (19, 'mama', '$2y$10$TqCwPxYRNcJjx5il4xLr3eXqNluQV7wXDNI8h7vhiKbvFh69FRDGu', 'aff@gmail.com', '0111111111', NULL, '2025-02-20 08:33:21', 'user'),
@@ -233,38 +233,38 @@ CREATE TABLE `zone_number` (
 --
 
 INSERT INTO `zone_number` (`id`, `number`, `zone`, `status`, `price`, `image`) VALUES
-(1, 'A1', 1, 0, 1400.00, 'market1.png'),
-(2, 'A2', 1, 1, 3000.00, 'market2.png'),
-(9, 'A3', 1, 0, 2000.00, 'market3.png'),
-(10, 'A4', 1, 0, 1000.00, 'market1.png'),
-(11, 'A5', 1, 0, 1500.00, 'market1.png'),
-(12, 'A6', 1, 0, 1000.00, 'market1.png'),
-(13, 'A7', 1, 0, 1000.00, 'market1.png'),
-(14, 'A8', 1, 0, 1000.00, 'market1.png'),
-(15, 'A9', 1, 0, 1200.00, 'market1.png'),
-(16, 'A10', 1, 0, 1000.00, 'market2.png'),
-(17, 'B1', 2, 1, 1000.00, 'market2.png'),
-(18, 'B2', 2, 0, 1500.00, 'market3.png'),
-(19, 'B3', 2, 0, 1000.00, 'market3.png'),
-(20, 'B4', 2, 0, 1000.00, 'market2.png'),
-(21, 'B5', 2, 0, 2000.00, 'market1.png'),
-(22, 'B6', 2, 0, 1500.00, 'market1.png'),
-(23, 'B7', 2, 0, 1000.00, 'market2.png'),
-(24, 'B8', 2, 0, 2000.00, 'market1.png'),
-(25, 'B9', 2, 0, 1500.00, 'market3.png'),
-(26, 'B10', 2, 0, 1000.00, 'market2.png'),
-(27, 'C1', 3, 0, 5000.00, 'market5.png'),
-(28, 'C2', 3, 0, 1500.00, 'market1.png'),
-(29, 'C3', 3, 0, 2500.00, 'market4.png'),
-(30, 'C4', 3, 0, 1000.00, 'market1.png'),
-(31, 'C5', 3, 0, 2000.00, 'market2.png'),
-(32, 'C6', 3, 0, 3000.00, 'market1.png'),
-(33, 'C7', 3, 0, 1500.00, 'market1.png'),
-(34, 'C8', 3, 0, 4000.00, 'market2.png'),
-(35, 'C9', 3, 0, 3000.00, 'market4.png'),
-(36, 'C10', 3, 0, 3500.00, 'market3.png'),
-(37, 'C11', 3, 0, 5000.00, 'market5.png'),
-(38, 'C12', 3, 0, 1000.00, 'market4.png');
+(1, 'A1', 1, 0, 1400.00, 'A01.jpg'),
+(2, 'A2', 1, 1, 3000.00, 'A02.jpg'),
+(9, 'A3', 1, 0, 2000.00, 'A03.jpg'),
+(10, 'A4', 1, 0, 1000.00, 'A04.jpg'),
+(11, 'A5', 1, 0, 1500.00, 'A06.jpg'),
+(12, 'A6', 1, 0, 1000.00, 'A07.jpg'),
+(13, 'A7', 1, 0, 1000.00, 'A07.jpg'),
+(14, 'A8', 1, 0, 1000.00, 'A08.jpg'),
+(15, 'A9', 1, 0, 1200.00, 'A09.jpg'),
+(16, 'A10', 1, 0, 1000.00, 'A10.jpg'),
+(17, 'B1', 2, 1, 1000.00, 'B01.jpg'),
+(18, 'B2', 2, 0, 1500.00, 'B02.jpg'),
+(19, 'B3', 2, 0, 1000.00, 'B03.jpg'),
+(20, 'B4', 2, 0, 1000.00, 'B04.jpg'),
+(21, 'B5', 2, 0, 2000.00, 'DEMO_B.jpg'),
+(22, 'B6', 2, 0, 1500.00, 'DEMO_B.jpg'),
+(23, 'B7', 2, 0, 1000.00, 'DEMO_B.jpg'),
+(24, 'B8', 2, 0, 2000.00, 'DEMO_B.jpg'),
+(25, 'B9', 2, 0, 1500.00, 'DEMO_B.jpg'),
+(26, 'B10', 2, 0, 1000.00, 'DEMO_B.jpg'),
+(27, 'C1', 3, 0, 5000.00, 'DEMO_C.jpg'),
+(28, 'C2', 3, 0, 1500.00, 'DEMO_C.jpg'),
+(29, 'C3', 3, 0, 2500.00, 'DEMO_C.jpg'),
+(30, 'C4', 3, 0, 1000.00, 'DEMO_C.jpg'),
+(31, 'C5', 3, 0, 2000.00, 'DEMO_C.jpg'),
+(32, 'C6', 3, 0, 3000.00, 'DEMO_C.jpg'),
+(33, 'C7', 3, 0, 1500.00, 'DEMO_C.jpg'),
+(34, 'C8', 3, 0, 4000.00, 'DEMO_C.jpg'),
+(35, 'C9', 3, 0, 3000.00, 'DEMO_C.jpg'),
+(36, 'C10', 3, 0, 3500.00, 'DEMO_C.jpg'),
+(37, 'C11', 3, 0, 5000.00, 'DEMO_C.jpg'),
+(38, 'C12', 3, 0, 1000.00, 'DEMO_C.jpg');
 
 --
 -- Indexes for dumped tables
@@ -347,7 +347,7 @@ ALTER TABLE `banners`
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `faqs`
@@ -365,13 +365,13 @@ ALTER TABLE `payments`
 -- AUTO_INCREMENT for table `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `users`

@@ -56,7 +56,7 @@ $banner_result = $conn->query($sql_banner);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    
+
 </head>
 
 <body>
@@ -91,7 +91,7 @@ $banner_result = $conn->query($sql_banner);
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </button>
     </div>
-    
+
 
     <div class="container mt-5">
         <!-- Section แนะนำตลาด -->
@@ -159,12 +159,13 @@ $banner_result = $conn->query($sql_banner);
             <div class="mt-4">
                 <?php
                 if ($reviews_result->num_rows > 0) {
+                    $count = 0; // ตัวนับจำนวนรีวิว
                     while ($review = $reviews_result->fetch_assoc()) {
-                        // ตัดชื่อและแทนที่ตัวอักษรที่เหลือด้วย '*'
                         $username = $review['username'];
                         $masked_username = substr($username, 0, 2) . str_repeat('*', strlen($username) - 2);
+                        $hiddenClass = ($count >= 3) ? 'd-none more-reviews' : ''; // ซ่อนรีวิวที่เกิน 3 รายการ
                 ?>
-                        <div class="review-card mb-4 p-3 border rounded shadow-sm">
+                        <div class="review-card mb-4 p-3 border rounded shadow-sm <?= $hiddenClass ?>">
                             <blockquote class="blockquote mb-0">
                                 <p class="lead">“<?php echo $review['comment']; ?>”</p>
                                 <footer class="blockquote-footer">
@@ -173,6 +174,10 @@ $banner_result = $conn->query($sql_banner);
                             </blockquote>
                         </div>
                 <?php
+                        $count++;
+                    }
+                    if ($reviews_result->num_rows > 3) {
+                        echo '<button id="showMoreBtn" class="btn btn-primary">ดูรีวิวเพิ่มเติม</button>';
                     }
                 } else {
                     echo "<p>ยังไม่มีรีวิวจากลูกค้า</p>";
@@ -180,6 +185,8 @@ $banner_result = $conn->query($sql_banner);
                 ?>
             </div>
         </section>
+
+        
         <!-- Section FAQ -->
         <section class="mt-4">
             <div class="d-flex justify-content-between align-items-center">
@@ -239,7 +246,7 @@ $banner_result = $conn->query($sql_banner);
         </div>
     </div>
 
-
+    <script src="script/review.js"></script>
     <?php include('footer.php'); ?>
 </body>
 
